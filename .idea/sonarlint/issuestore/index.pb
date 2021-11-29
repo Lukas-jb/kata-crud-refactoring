@@ -1,0 +1,23 @@
+
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+W
+'back/src/main/java/models/TaskList.java,f\f\fff931c2d4003891290423dc166623e69628bada
+S
+#back/src/main/java/models/Todo.java,9\0\90f57e3777cd8cffd0a34a942409ab98fa24029c
+`
+0back/src/main/java/services/TaskListService.java,e\1\e132d5019776ec5263b3206ff94d8cf47205cbc2
+\
+,back/src/main/java/services/TodoService.java,b\7\b7ae489c3948c47cea1a9b8a465b1f0c167bc964
+i
+9back/src/main/java/co/com/sofka/crud/CrudApplication.java,6\f\6f7492e2213636527c536fc5eceaebe6b751a807
+g
+7back/src/main/java/repositories/TaskListRepository.java,4\7\47f595716572dea76a95bd6f360909ac4e5ce087
+b
+2back/src/main/java/controllers/TodoController.java,9\0\9079b3e004cd99de440c9387c4cd8dbffec3943f
+c
+3back/src/main/java/repositories/TodoRepository.java,8\6\8609f161c1fc7780100c23aca5b10cb50e3a91e9
+f
+6back/src/main/java/controllers/TaskListController.java,d\7\d73c0d9dac8a777ce520ad386f504c82c6422598
+l
+<back/src/main/java/co/com/sofka/crud/ServletInitializer.java,8\f\8f66a507c9fa3e6bbec0eac51b7600e937ed4de2
