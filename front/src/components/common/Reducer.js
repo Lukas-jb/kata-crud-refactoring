@@ -1,6 +1,5 @@
 function Reducer(state, action) {
 	switch (action.type) {
-		//Verificar 
 		case 'update-tasklist':
 			const taskUpdateList = state.task;
 			taskUpdateList.taskList = action.taskList;
@@ -9,7 +8,6 @@ function Reducer(state, action) {
 			const newTaskList = state.task.taskList;
 			newTaskList.push(action.item);
 			return { ...state, task: { taskList: newTaskList, item: {} } }
-
 		case 'delete-task':
 			const taskDeleteItem = state.task;
 			const taskListUpdate = taskDeleteItem.taskList.filter((item) => {
@@ -17,11 +15,10 @@ function Reducer(state, action) {
 			});
 			taskDeleteItem.taskList = taskListUpdate;
 			return { ...state, task: taskDeleteItem }
-
 		case 'update-item':
 			const todoUpdateItem = state.todo;
 			const listUpdateEdit = todoUpdateItem.todoList.map((item) => {
-				return item.id === action.item.id ? action.item : item; // refactorizo
+				return item.id === action.item.id ? action.item : item;
 			});
 			todoUpdateItem.todoList = listUpdateEdit;
 			todoUpdateItem.item = {};

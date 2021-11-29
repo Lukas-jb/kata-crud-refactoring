@@ -16,9 +16,9 @@ const TaskForm = () => {
 			id: null,
 		};
 
-		const vsExprReg = /[A-Za-z0-9_]/; // Caracteres
+		const vsExprReg = /[A-Za-z0-9_]/;
 		if (vsExprReg.test(request.name)) {
-			document.querySelector(".alert").innerHTML = ""; // Alerta
+			document.querySelector(".alert").innerHTML = "";
 			fetch(HOST_API + "/task", {
 				method: "POST",
 				body: JSON.stringify(request),
@@ -42,6 +42,7 @@ const TaskForm = () => {
 			setState({ ...state, name: event.target.value })
 		}} />
 		<button onClick={onAdd} disabled={!state.name}>Nueva Lista</button>
+		<div className="alert"></div>
 	</form>
 	;
 }

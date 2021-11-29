@@ -18,9 +18,9 @@ const Form = (TaskListId) => {
           completed: false
         };
 
-        const vsExprReg = /[A-Za-z0-9_]/; // Caracteres
+        const vsExprReg = /[A-Za-z0-9_]/;
 	  if(vsExprReg.test(request.name)) {
-		document.querySelector(".alert").innerHTML = ""; // Alerta
+		document.querySelector(".alert").innerHTML = "";
 		fetch(HOST_API + "/todo", {
 			method: "POST",
 			body: JSON.stringify(request),
@@ -37,6 +37,31 @@ const Form = (TaskListId) => {
 		} else{
 			document.querySelector(".alert").innerHTML = "Solo utilice caracteres Alfanuméricos";
 		}
+	  }
+	  
+	  const onEdit = (event) => {
+		event.preventDefault();
+	
+		const request = {
+		  name: state.name,
+		  id: item.id,
+		  idList: TaskListId.TaskListId,
+		  completed: item.isCompleted
+		};
+	
+		fetch(HOST_API + "/todo", {
+		  method: "PUT",
+		  body: JSON.stringify(request),
+		  headers: {
+			'Content-Type': 'application/json'
+		  }
+		})
+		  .then(response => response.json())
+		  .then((todo) => {
+			dispatch({ type: "update-item", item: todo });
+			setState({ name: "" });
+			formRef.current.reset();
+		  });
 	  }
 
         return <form ref={formRef} className="bar">
